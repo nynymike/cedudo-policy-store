@@ -1,0 +1,52 @@
+namespace Linux {
+  entity User = {
+    uid: Long,
+    gid: Long,
+    groups: Set<String>,
+    home: String,
+    shell: String
+  };
+
+  entity Service = {
+    environment: String,
+    critical: Bool
+  };
+
+  entity Host;
+
+  action "read-logs" appliesTo {
+    principal: [User],
+    resource: [Service],
+    context: {
+      current_time: Long,
+      hostname: String,
+      local_console: Bool,
+      interactive: Bool,
+      intruder_risk_level: String
+    }
+  };
+
+  action "restart" appliesTo {
+    principal: [User],
+    resource: [Service],
+    context: {
+      current_time: Long,
+      hostname: String,
+      local_console: Bool,
+      interactive: Bool,
+      intruder_risk_level: String
+    }
+  };
+
+  action "open-shell" appliesTo {
+    principal: [User],
+    resource: [Host],
+    context: {
+      current_time: Long,
+      hostname: String,
+      local_console: Bool,
+      interactive: Bool,
+      intruder_risk_level: String
+    }
+  };
+}
