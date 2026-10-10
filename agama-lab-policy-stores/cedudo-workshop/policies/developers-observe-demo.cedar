@@ -8,5 +8,6 @@ when {
     principal has groups &&
     (principal.groups.contains("developers") ||
      principal.groups.contains("operators")) &&
+     resource has critical &&
      ! (resource.critical)
 };
