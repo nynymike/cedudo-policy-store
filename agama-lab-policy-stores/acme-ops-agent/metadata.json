@@ -4,9 +4,9 @@
         "id": "b5d5520247b69d9c14a7fbbdc6ee8a3f",
         "name": "acme-ops-agent",
         "description": "Govern an AI ops agent's customer reads, exports, and deployments with Cedarling.",
-        "version": "11.4.5",
+        "version": "11.4.6",
         "created_date": "2026-10-28T00:00:00Z",
-        "updated_date": "2026-11-04T21:57:55.156262+00:00"
+        "updated_date": "2026-11-04T22:25:15.981170+00:00"
     },
     "policy_store_spec_version": 1
 }
